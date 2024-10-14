@@ -1,5 +1,5 @@
 # MI-PBR
-A minimal PBR resource pack for the Modern Industrialization mod.
+A minimal PBR resource pack for the Modern Industrialization mod. This project is still an early work-in-progress so not all blocks are complete.
 
 ## Releases
 You can find them under _Assets_ in the [Releases](https://github.com/Null-MC/MI-PBR/releases) section.
