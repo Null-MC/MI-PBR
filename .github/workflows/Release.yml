@@ -3,12 +3,13 @@ on: workflow_dispatch
 
 jobs:
   publish:
-    name: Publish LabPbr
+    name: Publish
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Compile LabPBR
         uses: null511/PixelGraph.GitHubAction@main
         with:
@@ -26,6 +27,7 @@ jobs:
         with:
           draft: true
           prerelease: true
+          generate_release_notes: true
           make_latest: "true"
           name: Release ${{ github.run_number }}
           tag_name: v${{ github.run_number }}
