@@ -46,23 +46,23 @@ jobs:
           asset_path: ./MI-OldPBR-v${{ github.run_number }}.zip
           asset_name: MI-OldPBR-v${{ github.run_number }}.zip
           asset_content_type: application/zip
-      - name: Publish to CurseForge, Modrinth
-        uses: Kir-Antipov/mc-publish@v3.3
-        with:
-          name: MI-PBR v${{ github.run_number }}
-          version: v${{ github.run_number }}
-          version-type: beta
-          changelog: "###Release v${{ github.run_number }}"
-          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
-          modrinth-id: <TODO>
-          modrinth-featured: true
-          modrinth-loaders: minecraft
-          curseforge-token: ${{ secrets.CF_API_TOKEN }}
-          curseforge-id: <TODO>
-          loaders: |
-            fabric
-            forge
-            quilt
-          files: |
-            MI-LabPBR-v${{ github.run_number }}.zip
-            MI-OldPBR-v${{ github.run_number }}.zip
+      # - name: Publish to CurseForge, Modrinth
+      #   uses: Kir-Antipov/mc-publish@v3.3
+      #   with:
+      #     name: MI-PBR v${{ github.run_number }}
+      #     version: v${{ github.run_number }}
+      #     version-type: beta
+      #     changelog: "###Release v${{ github.run_number }}"
+      #     modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+      #     modrinth-id: <TODO>
+      #     modrinth-featured: true
+      #     modrinth-loaders: minecraft
+      #     curseforge-token: ${{ secrets.CF_API_TOKEN }}
+      #     curseforge-id: <TODO>
+      #     loaders: |
+      #       fabric
+      #       forge
+      #       quilt
+      #     files: |
+      #       MI-LabPBR-v${{ github.run_number }}.zip
+      #       MI-OldPBR-v${{ github.run_number }}.zip
