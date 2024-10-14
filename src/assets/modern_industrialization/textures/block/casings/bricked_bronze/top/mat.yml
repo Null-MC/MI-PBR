@@ -1,0 +1,12 @@
+normal:
+  curve-x: 90
+  curve-y: 90
+  radius-x: 0.2
+  radius-y: 0.2
+  noise: 2
+  method: sobel-low
+  strength: 1.6167
+smooth:
+  value: 0.55
+hcm:
+  value: 255

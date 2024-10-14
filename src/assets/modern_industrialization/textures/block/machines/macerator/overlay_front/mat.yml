@@ -1,0 +1,9 @@
+wrap-x: false
+wrap-y: false
+blend-mode: cutout
+height:
+  edge-fade-x: 0.01
+  edge-fade-y: 0.01
+normal:
+  noise: 0.5
+  method: sobel-high

@@ -1,0 +1,13 @@
+model: modern_industrialization:block/steel_block
+height:
+  scale: 0
+normal:
+  curve-x: 90
+  curve-y: 90
+  radius-x: 0.2
+  radius-y: 0.2
+  noise: 2
+  method: sobel-low
+  strength: 1.8540
+hcm:
+  value: 255

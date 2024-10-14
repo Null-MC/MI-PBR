@@ -1,0 +1,8 @@
+wrap-x: false
+wrap-y: false
+blend-mode: cutout
+normal:
+  noise: 0.5
+  method: sobel-low
+f0:
+  value: 0.04

@@ -1,0 +1,21 @@
+wrap-x: false
+wrap-y: false
+blend-mode: cutout
+height:
+  edge-fade-bottom: 0.01
+  edge-fade-left: 0.01
+  edge-fade-right: 0.01
+normal:
+  noise: 0.5
+  method: sobel-low
+  strength: 1.5
+f0:
+  value: 0.04
+filters:
+- name: screen
+  left: 0.1875
+  top: 0.125
+  width: 0.625
+  height: 0.3125
+  normal-curve-x: 30
+  normal-curve-y: 30

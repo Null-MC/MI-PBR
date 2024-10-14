@@ -1,0 +1,28 @@
+wrap-x: false
+wrap-y: false
+model: modern_industrialization:block/turbo_machine_hull
+normal:
+  curve-x: 90
+  curve-y: 90
+  radius-x: 0.25
+  radius-y: 0.25
+  noise: 0.1
+  method: sobel-low
+  strength: 2
+hcm:
+  value: 255
+filters:
+- name: base
+  left: 0.0625
+  top: 0.0625
+  width: 0.875
+  height: 0.875
+  normal-curve-x: 20
+  normal-curve-y: 20
+- name: center
+  left: 0.3125
+  top: 0.3125
+  width: 0.375
+  height: 0.375
+  normal-curve-x: -45
+  normal-curve-y: -45

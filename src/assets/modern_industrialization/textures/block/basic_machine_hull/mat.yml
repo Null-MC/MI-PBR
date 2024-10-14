@@ -1,0 +1,20 @@
+wrap-x: false
+wrap-y: false
+model: modern_industrialization:block/basic_machine_hull
+normal:
+  curve-x: 90
+  curve-y: 90
+  radius-x: 0.25
+  radius-y: 0.25
+  noise: 0.5
+  strength: 0.001
+hcm:
+  value: 230
+filters:
+- name: center
+  left: 0.0625
+  top: 0.0625
+  width: 0.875
+  height: 0.875
+  normal-curve-x: 15
+  normal-curve-y: 15

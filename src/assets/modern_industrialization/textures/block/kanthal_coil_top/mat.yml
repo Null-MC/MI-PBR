@@ -1,0 +1,13 @@
+wrap-x: false
+wrap-y: false
+model: modern_industrialization:block/kanthal_coil
+normal:
+  curve-x: 90
+  curve-y: 90
+  radius-x: 0.25
+  radius-y: 0.25
+  noise: 1.5
+smooth:
+  scale: 1.4
+hcm:
+  value: 234

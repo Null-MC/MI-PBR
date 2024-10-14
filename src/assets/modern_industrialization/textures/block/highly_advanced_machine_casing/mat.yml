@@ -1,0 +1,21 @@
+wrap-x: false
+wrap-y: false
+model: modern_industrialization:block/highly_advanced_machine_casing
+normal:
+  curve-x: 90
+  curve-y: 90
+  radius-x: 0.2
+  radius-y: 0.2
+  noise: 0.2
+  method: sobel-low
+  strength: 1.6167
+hcm:
+  value: 255
+filters:
+- name: center
+  left: 0.0625
+  top: 0.0625
+  width: 0.875
+  height: 0.875
+  normal-curve-x: -15
+  normal-curve-y: -15

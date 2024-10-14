@@ -1,0 +1,10 @@
+wrap-x: false
+wrap-y: false
+blend-mode: cutout
+normal:
+  method: sobel3
+  strength: 2.1861
+smooth:
+  value: 0.6
+hcm:
+  value: 255

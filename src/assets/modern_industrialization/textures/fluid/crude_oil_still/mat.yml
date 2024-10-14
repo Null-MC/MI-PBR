@@ -1,0 +1,11 @@
+wrap-x: true
+wrap-y: true
+blend-mode: transparent
+opacity:
+  value: 0.9
+normal:
+  method: sobel5
+smooth:
+  value: 0.7
+sss:
+  value: 0.1

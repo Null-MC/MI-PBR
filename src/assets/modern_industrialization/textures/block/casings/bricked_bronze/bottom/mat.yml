@@ -1,0 +1,4 @@
+normal:
+  noise: 4
+  method: sobel-low
+  strength: 1.9963

@@ -1,0 +1,27 @@
+wrap-x: false
+wrap-y: false
+blend-mode: cutout
+height:
+  edge-fade-x: 0.01
+  edge-fade-y: 0.01
+normal:
+  noise: 0.5
+  method: sobel-low
+  strength: 2
+f0:
+  value: 0.04
+filters:
+- name: light-red
+  left: 0.3125
+  top: 0.125
+  width: 0.125
+  height: 0.125
+  normal-curve-x: 60
+  normal-curve-y: 60
+- name: light-green
+  left: 0.5625
+  top: 0.125
+  width: 0.125
+  height: 0.125
+  normal-curve-x: 60
+  normal-curve-y: 60

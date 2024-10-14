@@ -1,0 +1,13 @@
+wrap-x: false
+wrap-y: false
+model: modern_industrialization:block/stainless_steel_barrel
+normal:
+  curve-x: 90
+  curve-y: 90
+  radius-x: 0.5
+  radius-y: 0.2
+  noise: 0.4
+  method: sobel-high
+  strength: 1.5219
+f0:
+  value: 0.04
