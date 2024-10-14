@@ -5,19 +5,21 @@ jobs:
   prepare_release:
     name: Prepare Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     outputs:
       release_id: ${{ steps.create_release.outputs.id }}
       upload_url: ${{ steps.create_release.outputs.upload_url }}
     steps:
       - name: Create Release Draft
         id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: v${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
           draft: true
+          prerelease: true
+          makeLatest: true
+          name: Release ${{ github.run_number }}
+          tag: v${{ github.run_number }}
 
   publish_labPbr:
     name: Publish LabPbr
@@ -37,6 +39,15 @@ jobs:
           project: src/project.yml
           profile: MI-OldPBR
           zip: MI-OldPBR-v${{ github.run_number }}.zip
+      - name: Release LabPBR
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.prepare_release.outputs.upload_url }}
+          asset_path: ./MI-LabPBR-v${{ github.run_number }}.zip
+          asset_name: MI-LabPBR-v${{ github.run_number }}.zip
+          asset_content_type: application/zip
       - name: Release OldPBR
         uses: actions/upload-release-asset@v1
         env:
