@@ -2,31 +2,13 @@ name: Release
 on: workflow_dispatch
 
 jobs:
-  prepare_release:
-    name: Prepare Release
+  publish:
+    name: Publish LabPbr
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    outputs:
-      release_id: ${{ steps.create_release.outputs.id }}
-      upload_url: ${{ steps.create_release.outputs.upload_url }}
     steps:
-      - name: Create Release Draft
-        id: create_release
-        uses: ncipollo/release-action@v1
-        with:
-          draft: true
-          prerelease: true
-          makeLatest: true
-          name: Release ${{ github.run_number }}
-          tag: v${{ github.run_number }}
-
-  publish_labPbr:
-    name: Publish LabPbr
-    runs-on: ubuntu-latest
-    needs: [prepare_release]
-    steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Compile LabPBR
         uses: null511/PixelGraph.GitHubAction@main
         with:
@@ -39,24 +21,18 @@ jobs:
           project: src/project.yml
           profile: MI-OldPBR
           zip: MI-OldPBR-v${{ github.run_number }}.zip
-      - name: Release LabPBR
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release
+        uses: softprops/action-gh-release@v2
         with:
-          upload_url: ${{ needs.prepare_release.outputs.upload_url }}
-          asset_path: ./MI-LabPBR-v${{ github.run_number }}.zip
-          asset_name: MI-LabPBR-v${{ github.run_number }}.zip
-          asset_content_type: application/zip
-      - name: Release OldPBR
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ needs.prepare_release.outputs.upload_url }}
-          asset_path: ./MI-OldPBR-v${{ github.run_number }}.zip
-          asset_name: MI-OldPBR-v${{ github.run_number }}.zip
-          asset_content_type: application/zip
+          draft: true
+          prerelease: true
+          make_latest: "true"
+          name: Release ${{ github.run_number }}
+          tag_name: v${{ github.run_number }}
+          files: |
+            MI-LabPBR-v${{ github.run_number }}.zip
+            MI-OldPBR-v${{ github.run_number }}.zip
+            # LICENSE
       # - name: Publish to CurseForge, Modrinth
       #   uses: Kir-Antipov/mc-publish@v3.3
       #   with:
