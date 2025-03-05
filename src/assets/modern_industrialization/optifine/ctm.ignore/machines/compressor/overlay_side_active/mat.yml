@@ -1,9 +1,0 @@
-wrap-x: false
-wrap-y: false
-blend-mode: cutout
-color:
-  value: '#0000FF'
-ctm:
-  method: of-overlay-fixed
-  match-blocks: modern_industrialization:electric_compressor
-  match-tiles: modern_industrialization:textures/block/machines/compressor/overlay_side_active
