@@ -73,5 +73,5 @@ jobs:
             MI-OldPBR-v${{ github.run_number }}.zip
             MI-CTM-LabPBR-v${{ github.run_number }}.zip
             MI-CTM-OldPBR-v${{ github.run_number }}.zip
-          dependencies: |
-            modern-industrialization(optional){modrinth:Gov5Dboq}
+          # dependencies: |
+          #   modern-industrialization(optional){modrinth:Gov5Dboq}
