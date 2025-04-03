@@ -1,0 +1,13 @@
+wrap-x: false
+wrap-y: false
+model: modern_industrialization:block/bronze_machine_casing_pipe
+normal:
+  curve-x: 90
+  curve-y: 90
+  radius-x: 0.2
+  radius-y: 0.2
+  noise: 2
+  method: sobel-low
+hcm:
+  value: 234
+filters: []

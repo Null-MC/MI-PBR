@@ -1,0 +1,32 @@
+wrap-x: false
+wrap-y: false
+blend-mode: cutout
+normal:
+  noise: 1
+  method: sobel-low
+  strength: 2
+emissive:
+  scale: 0.04
+filters:
+- name: light-1
+  left: 0.1875
+  top: 0.1875
+  width: 0.1875
+  height: 0.1875
+  normal-curve-x: 60
+  normal-curve-y: 60
+- name: light-2
+  left: 0.1875
+  top: 0.4375
+  width: 0.1875
+  height: 0.1875
+  normal-curve-x: 60
+  normal-curve-y: 60
+- name: light-3
+  left: 0.625
+  top: 0.1875
+  width: 0.1875
+  height: 0.3125
+  normal-curve-x: 60
+  normal-curve-y: 60
+  normal-radius-y: 0.3

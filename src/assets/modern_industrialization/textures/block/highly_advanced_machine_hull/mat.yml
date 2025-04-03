@@ -9,8 +9,8 @@ normal:
   noise: 0.1
   method: sobel-low
   strength: 2
-f0:
-  value: 0.053
+hcm:
+  value: 233
 filters:
 - name: base
   left: 0.0625

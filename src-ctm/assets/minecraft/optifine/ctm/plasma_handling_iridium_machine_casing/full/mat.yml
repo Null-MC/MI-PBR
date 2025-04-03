@@ -1,0 +1,11 @@
+wrap-x: true
+wrap-y: true
+height:
+  scale: 0
+normal:
+  noise: 0.3
+  method: sobel-high
+  strength: 2
+hcm:
+  value: 237
+filters: []

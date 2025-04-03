@@ -1,0 +1,14 @@
+wrap-x: false
+wrap-y: false
+model: modern_industrialization:block/titanium_block
+height:
+  scale: 0
+normal:
+  curve-x: 90
+  curve-y: 90
+  radius-x: 0.25
+  radius-y: 0.25
+  method: sobel5
+  strength: 0.6
+hcm:
+  value: 255

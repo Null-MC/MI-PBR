@@ -1,4 +1,5 @@
-model: modern_industrialization:block/steel_block
+wrap-x: false
+wrap-y: false
 height:
   scale: 0
 normal:
@@ -8,6 +9,6 @@ normal:
   radius-y: 0.2
   noise: 2
   method: sobel-low
-  strength: 1.8540
+  strength: 1.5
 hcm:
-  value: 255
+  value: 230

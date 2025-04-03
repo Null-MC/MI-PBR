@@ -1,0 +1,10 @@
+wrap-x: true
+wrap-y: false
+normal:
+  curve-y: 90
+  radius-y: 0.3
+  noise: 1.5
+smooth:
+  scale: 1.4
+hcm:
+  value: 234

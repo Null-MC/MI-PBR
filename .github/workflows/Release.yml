@@ -22,6 +22,18 @@ jobs:
           project: src/project.yml
           profile: MI-OldPBR
           zip: MI-OldPBR-v${{ github.run_number }}.zip
+      - name: Compile LabPBR CTM Addon
+        uses: null511/PixelGraph.GitHubAction@main
+        with:
+          project: src-ctm/project.yml
+          profile: MI-CTM-LabPBR
+          zip: MI-CTM-LabPBR-v${{ github.run_number }}.zip
+      - name: Compile OldPBR CTM Addon
+        uses: null511/PixelGraph.GitHubAction@main
+        with:
+          project: src-ctm/project.yml
+          profile: MI-CTM-OldPBR
+          zip: MI-CTM-OldPBR-v${{ github.run_number }}.zip
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
@@ -34,23 +46,32 @@ jobs:
           files: |
             MI-LabPBR-v${{ github.run_number }}.zip
             MI-OldPBR-v${{ github.run_number }}.zip
-      # - name: Publish to CurseForge, Modrinth
-      #   uses: Kir-Antipov/mc-publish@v3.3
-      #   with:
-      #     name: MI-PBR v${{ github.run_number }}
-      #     version: v${{ github.run_number }}
-      #     version-type: beta
-      #     changelog: "###Release v${{ github.run_number }}"
-      #     modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
-      #     modrinth-id: <TODO>
-      #     modrinth-featured: true
-      #     modrinth-loaders: minecraft
-      #     curseforge-token: ${{ secrets.CF_API_TOKEN }}
-      #     curseforge-id: <TODO>
-      #     loaders: |
-      #       fabric
-      #       forge
-      #       quilt
-      #     files: |
-      #       MI-LabPBR-v${{ github.run_number }}.zip
-      #       MI-OldPBR-v${{ github.run_number }}.zip
+            MI-CTM-LabPBR-v${{ github.run_number }}.zip
+            MI-CTM-OldPBR-v${{ github.run_number }}.zip
+      - name: Publish to Modrinth
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          name: MI-PBR v${{ github.run_number }}
+          version: v${{ github.run_number }}
+          version-type: beta
+          changelog: "###Release v${{ github.run_number }}"
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          modrinth-id: Zmi9FOyp
+          modrinth-featured: true
+          modrinth-loaders: minecraft
+          modrinth-files-primary: MI-LabPBR-v${{ github.run_number }}.zip
+          modrinth-files-secondary: |
+            MI-OldPBR-v${{ github.run_number }}.zip
+            MI-CTM-LabPBR-v${{ github.run_number }}.zip
+            MI-CTM-OldPBR-v${{ github.run_number }}.zip
+          loaders: |
+            fabric
+            forge
+            quilt
+          files: |
+            MI-LabPBR-v${{ github.run_number }}.zip
+            MI-OldPBR-v${{ github.run_number }}.zip
+            MI-CTM-LabPBR-v${{ github.run_number }}.zip
+            MI-CTM-OldPBR-v${{ github.run_number }}.zip
+          dependencies: |
+            modern-industrialization(optional){modrinth:Gov5Dboq}

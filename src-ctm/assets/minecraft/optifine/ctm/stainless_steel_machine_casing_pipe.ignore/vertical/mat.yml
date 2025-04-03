@@ -1,0 +1,12 @@
+wrap-x: false
+wrap-y: true
+height:
+  scale: 0
+normal:
+  curve-x: 90
+  radius-x: 0.2
+  noise: 0.5
+  method: sobel-low
+hcm:
+  value: 230
+filters: []

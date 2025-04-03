@@ -9,6 +9,8 @@ normal:
   noise: 0.1
   method: sobel-low
   strength: 2
+smooth:
+  scale: 0.7
 hcm:
   value: 255
 filters:

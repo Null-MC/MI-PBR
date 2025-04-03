@@ -1,0 +1,10 @@
+wrap-x: true
+wrap-y: true
+color:
+  value: '#F2E863'
+normal:
+  noise: 1.5
+smooth:
+  value: 0.8
+hcm:
+  value: 234

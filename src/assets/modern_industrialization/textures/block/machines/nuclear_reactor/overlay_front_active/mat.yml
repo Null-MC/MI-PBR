@@ -6,3 +6,5 @@ normal:
   strength: 4.7
 f0:
   value: 0.04
+emissive:
+  scale: 0.4

@@ -1,0 +1,37 @@
+wrap-x: true
+wrap-y: false
+height:
+  scale: 0
+normal:
+  curve-y: 90
+  radius-y: 0.3
+  noise: 1.5
+  method: sobel-high
+  strength: 2.6130
+hcm:
+  value: 234
+filters:
+- name: 1
+  left: 0
+  top: 0.0625
+  width: 1
+  height: 0.1875
+  normal-curve-y: 60
+- name: 2
+  left: 0
+  top: 0.3125
+  width: 1
+  height: 0.1875
+  normal-curve-y: 60
+- name: 3
+  left: 0
+  top: 0.5625
+  width: 1
+  height: 0.1875
+  normal-curve-y: 60
+- name: 4
+  left: 0
+  top: 0.8125
+  width: 1
+  height: 0.1875
+  normal-curve-y: 60

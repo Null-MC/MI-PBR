@@ -1,0 +1,19 @@
+name: MI-CTM-PBR
+description: CTM Addon for MI-PBR
+author: Joshua Miller
+input:
+  format: raw
+profiles:
+- edition: Java
+  format: 15
+  name: MI-CTM-LabPbr
+  encoding:
+    format: lab-1.3
+    enable-palette: false
+  block-texture-size: 16
+- edition: Java
+  format: 15
+  name: MI-CTM-OldPbr
+  encoding:
+    format: old-pbr
+  block-texture-size: 16
