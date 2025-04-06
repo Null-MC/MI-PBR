@@ -34,20 +34,6 @@ jobs:
           project: src-ctm/project.yml
           profile: MI-CTM-OldPBR
           zip: MI-CTM-OldPBR-v${{ github.run_number }}.zip
-      - name: Release
-        uses: softprops/action-gh-release@v2
-        with:
-          draft: true
-          prerelease: true
-          generate_release_notes: true
-          make_latest: "true"
-          name: Release ${{ github.run_number }}
-          tag_name: v${{ github.run_number }}
-          files: |
-            MI-LabPBR-v${{ github.run_number }}.zip
-            MI-OldPBR-v${{ github.run_number }}.zip
-            MI-CTM-LabPBR-v${{ github.run_number }}.zip
-            MI-CTM-OldPBR-v${{ github.run_number }}.zip
       - name: Publish to Modrinth
         uses: Kir-Antipov/mc-publish@v3.3
         with:
@@ -55,15 +41,6 @@ jobs:
           version: v${{ github.run_number }}
           version-type: beta
           changelog: "###Release v${{ github.run_number }}"
-          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
-          modrinth-id: Zmi9FOyp
-          modrinth-featured: true
-          modrinth-loaders: minecraft
-          modrinth-files-primary: MI-LabPBR-v${{ github.run_number }}.zip
-          modrinth-files-secondary: |
-            MI-OldPBR-v${{ github.run_number }}.zip
-            MI-CTM-LabPBR-v${{ github.run_number }}.zip
-            MI-CTM-OldPBR-v${{ github.run_number }}.zip
           loaders: |
             fabric
             forge
@@ -73,5 +50,13 @@ jobs:
             MI-OldPBR-v${{ github.run_number }}.zip
             MI-CTM-LabPBR-v${{ github.run_number }}.zip
             MI-CTM-OldPBR-v${{ github.run_number }}.zip
-          # dependencies: |
-          #   modern-industrialization(optional){modrinth:Gov5Dboq}
+          game-versions: '>=1.16'
+          game-version-filter: none
+          modrinth-id: Zmi9FOyp
+          modrinth-featured: true
+          modrinth-loaders: minecraft
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          github-draft: true
+          github-prerelease: true
+          github-tag: v${{ github.run_number }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
