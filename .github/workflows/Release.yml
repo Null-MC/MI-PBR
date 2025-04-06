@@ -40,7 +40,7 @@ jobs:
           name: MI-PBR v${{ github.run_number }}
           version: v${{ github.run_number }}
           version-type: beta
-          changelog: "###Release v${{ github.run_number }}"
+          changelog: "TODO"
           loaders: |
             fabric
             forge
@@ -60,3 +60,5 @@ jobs:
           github-prerelease: true
           github-tag: v${{ github.run_number }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          dependencies: |
+            modern-industrialization(optional){modrinth:Gov5Dboq}
