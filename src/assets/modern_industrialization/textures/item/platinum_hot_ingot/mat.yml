@@ -1,0 +1,8 @@
+wrap-x: false
+wrap-y: false
+smooth:
+  scale: 0.75
+hcm:
+  value: 236
+emissive:
+  value: 0.45

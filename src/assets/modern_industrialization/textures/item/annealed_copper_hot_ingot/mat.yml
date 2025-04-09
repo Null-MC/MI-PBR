@@ -1,0 +1,10 @@
+wrap-x: false
+wrap-y: false
+normal:
+  noise: 1.5
+smooth:
+  scale: 0.75
+hcm:
+  value: 234
+emissive:
+  value: 0.45

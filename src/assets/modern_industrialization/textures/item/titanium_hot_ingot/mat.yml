@@ -1,0 +1,4 @@
+smooth:
+  scale: 0.75
+emissive:
+  value: 0.45
