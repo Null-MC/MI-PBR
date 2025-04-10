@@ -1,4 +1,6 @@
 name: MI-PBR
+description: PBR for Modern Industrialization
+author: Joshua Miller
 input:
   format: raw
 profiles:
