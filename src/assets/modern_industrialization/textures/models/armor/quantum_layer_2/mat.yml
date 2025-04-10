@@ -1,0 +1,6 @@
+wrap-x: false
+wrap-y: false
+occlusion:
+  value: 1
+emissive:
+  value: 0.6

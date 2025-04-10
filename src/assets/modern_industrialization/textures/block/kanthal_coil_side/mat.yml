@@ -12,7 +12,7 @@ normal:
 smooth:
   scale: 1.4
 hcm:
-  value: 234
+  value: 230
 filters:
 - name: 1
   left: 0

@@ -1,0 +1,8 @@
+wrap-x: false
+wrap-y: false
+height:
+  scale: 0
+normal:
+  noise: 4
+  method: sobel5
+  strength: 1.5

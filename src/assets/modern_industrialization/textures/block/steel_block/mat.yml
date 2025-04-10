@@ -1,5 +1,6 @@
 wrap-x: false
 wrap-y: false
+model: modern_industrialization:block/steel_block
 height:
   scale: 0
 normal:

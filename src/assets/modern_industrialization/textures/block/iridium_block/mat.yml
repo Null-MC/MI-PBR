@@ -11,3 +11,11 @@ normal:
   strength: 0.6
 hcm:
   value: 237
+filters:
+- name: center
+  left: 0.125
+  top: 0.125
+  width: 0.75
+  height: 0.75
+  normal-curve-x: -15
+  normal-curve-y: -15

@@ -1,2 +1,5 @@
+wrap-x: false
+wrap-y: false
+model: modern_industrialization:block/nickel_block
 metal:
   value: 255
