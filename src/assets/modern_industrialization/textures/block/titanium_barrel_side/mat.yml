@@ -1,0 +1,13 @@
+wrap-x: false
+wrap-y: false
+model: modern_industrialization:block/titanium_barrel
+normal:
+  curve-x: 90
+  curve-y: 90
+  radius-x: 0.3
+  radius-y: 0.3
+  noise: 1
+  method: sobel-low
+  strength: 1.5219
+f0:
+  value: 0.04

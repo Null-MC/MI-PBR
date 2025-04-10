@@ -9,7 +9,7 @@ normal:
   noise: 0.5
   method: sobel-low
 f0:
-  value: 0.067
+  value: 0.141
 filters:
 - name: center
   left: 0.0625

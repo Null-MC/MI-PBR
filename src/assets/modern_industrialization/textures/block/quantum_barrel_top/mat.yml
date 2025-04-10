@@ -1,0 +1,12 @@
+wrap-x: false
+wrap-y: false
+model: modern_industrialization:block/quantum_barrel
+normal:
+  curve-x: 90
+  curve-y: 90
+  radius-x: 0.3
+  radius-y: 0.3
+  method: sobel-low
+  strength: 2.7116
+hcm:
+  value: 237
